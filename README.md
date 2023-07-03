@@ -67,7 +67,7 @@ Creating a channel you will generate an roomId.
 
 To create a channel do you need to run this command on postman:
 
-Method: GET.
+Method: POST.
 
 - http://localhost:3000/api/v1/channels.create
 
