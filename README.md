@@ -61,24 +61,24 @@ Fill the required data and then do you *create a user*.
 ### 2 _ Get the room information via an API endpoint
 ---
 
-To be able to get the room information do you have to create a group.
+To be able to get the room information do you have to create a channel.
 
-Creating a group you will generate an Id.
+Creating a channel you will generate an roomId.
 
-To create a group do you need to run this command on postman:
+To create a channel do you need to run this command on postman:
 
 Method: GET.
 
-- localhost:3000/api/v1/groups.create
+- http://localhost:3000/api/v1/channels.create
 
 Required argument ->
-{name:}
+{name:RocketChat}
 
 *Then you generate an id, using this id we will be able to get the room info.*
 
 TO GET THE ROOM INFORMATION:
 
-- Run -> localhost:3000/api/v1/rooms.info
+- Run this query -> http://localhost:3000/api/v1/rooms.info?roomId=64a21a593ee9ce1e8a143294
 
 Required argument:
 roomId: Id do you generate when create a group.
