@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "d6a8b8a6-93f3-4417-b7c6-c26573dc762e",
+		"name": "API_TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28070086"
+	},
+	"item": [
+		{
+			"name": "CreateNewUser_1",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true,
+					"host": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "tn0Cz2H0urk1HnvXm4gqKuZcePwbLmSSDA-FkWkxRqW",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "wiYmobCp4RNB6tJeH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Luisa\",\r\n    \"email\": \"luisa123@email.com\",\r\n    \"password\": \"Luisa123\",\r\n    \"username\": \"Luisa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users.create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users.create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "channels.create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "LIeBY3eIagpp8TBkSOIhHD9Ce-LB3S8Ok45m2YlWaRR",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "wiYmobCp4RNB6tJeH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"RocketChat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/channels.create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"channels.create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "channels.addAll",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "LIeBY3eIagpp8TBkSOIhHD9Ce-LB3S8Ok45m2YlWaRR",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "wiYmobCp4RNB6tJeH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomId\":\"64a21a593ee9ce1e8a143294\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/channels.addAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"channels.addAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "channels.info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"host": true,
+					"user-agent": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "LIeBY3eIagpp8TBkSOIhHD9Ce-LB3S8Ok45m2YlWaRR",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "wiYmobCp4RNB6tJeH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomId\":\"64a21a593ee9ce1e8a143294\",\r\n    \"roomName\": \"RocketChat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/channels.info?roomId=64a21a593ee9ce1e8a143294",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"channels.info"
+					],
+					"query": [
+						{
+							"key": "roomId",
+							"value": "64a21a593ee9ce1e8a143294"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRoomInformation_2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true,
+					"accept-encoding": true,
+					"accept": true,
+					"user-agent": true,
+					"host": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "LIeBY3eIagpp8TBkSOIhHD9Ce-LB3S8Ok45m2YlWaRR",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "wiYmobCp4RNB6tJeH",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rooms.info?roomId=64a21a593ee9ce1e8a143294",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rooms.info"
+					],
+					"query": [
+						{
+							"key": "roomId",
+							"value": "64a21a593ee9ce1e8a143294"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListOfAllUserRoles_3",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true,
+					"host": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "LIeBY3eIagpp8TBkSOIhHD9Ce-LB3S8Ok45m2YlWaRR",
+						"type": "text"
+					},
+					{
+						"key": "X-User-Id",
+						"value": "wiYmobCp4RNB6tJeH",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/roles.list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"roles.list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
