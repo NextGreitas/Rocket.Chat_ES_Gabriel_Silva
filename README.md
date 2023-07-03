@@ -39,6 +39,8 @@ Searching the Rest API documentation on rocket.chat.com, we have all the necessa
 
 As the documentation points out, authentication is required for any query/update. For this, I created in the header the X-Auth-Token and X-User-Id, which are generated in the Token access tool on Rocket.chat workspace.
 
+![Auth](auth.png)
+
 ---
 
 ### 1 _ Create a new user via an API endpoint
