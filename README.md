@@ -50,10 +50,12 @@ Method: POST.
 - run: localhost:3000/v1/api/users.create
 
 Required Argument:
-{name:,
-email:,
-password:,
-username:,}
+E.g: 
+{"name": "Luisa",
+"email": "luisa123@email.com",
+"password": "Luisa123",
+"username": "Luisa"
+}
 
 Fill the required data and then do you *create a user*.
 
